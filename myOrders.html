@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>My-Orders</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="myOrderStyle.css">
+        <link href='https://fonts.googleapis.com/css?family=Unica One' rel='stylesheet'>
+        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Vollkorn'>
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+        
+        <link rel="shortcut icon" type="image/png" href="Assets/fetch-it-logo-2.png">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+    </head>
+    <body>
+    <div class="nav navbar navbar-default">
+            <div class="container">
+                <div class="dropdown">
+                    <div class="navbar-header">
+                        <div class="navbar-brand">
+                            <button href="#" class="btn btn-link btn-lg dropdown-toggle " type="button" id="menu1" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-menu-hamburger"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li class="side-menu" role="presentation"><a role="menuitem" tabindex="-1" href="landpage.html" class="side-menu-text">Home</a></li>
+                              <li class="side-menu" role="presentation"><a class="side-menu-text" role="menuitem" tabindex="-1" href="#">My Order</a></li>
+                              <li class="side-menu" role="presentation"><a class="side-menu-text" role="menuitem" tabindex="-1" href="#">Notification</a></li>
+                              <li class="side-menu" role="presentation"><a class="side-menu-text" role="menuitem" tabindex="-1" href="#">About</a></li>       <li role="presentation" class="divider"></li>
+                              <li class="side-menu" role="presentation"><a class="side-menu-text" role="menuitem" tabindex="-1" href="login.html">Logout</a></li>       
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-body">
+                        <div class="bread-crum">My Orders</div>
+                    </div>
+                </div>
+                
+            </div>    
+        </div>
+        
+        
+        <div class="container">
+            <div class="content-wrapper">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th colspan="8">My Orders</th>
+                        </tr>
+                        <tr>
+                            <th>id</th>
+                            <th>Pick-up</th>
+                            <th>Destination</th>
+                            <th>Placing Time</th>
+                            <th>Receiving Time</th>
+                            <th>Fetcher</th>
+                            <th>Contact</th>
+                            <th>Payment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>University of Karachi</td>
+                            <td>Malir Halt</td>
+                            <td>4:00 pm</td>
+                            <td>4:50 pm</td>
+                            <td>Shahid Khan</td>
+                            <td>03422556789</td>
+                            <td>120 Rs</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>University of Karachi</td>
+                            <td>Malir Halt</td>
+                            <td>4.00 pm</td>
+                            <td>4.50 pm</td>
+                            <td>Shahid Khan</td>
+                            <td>03422556789</td>
+                            <td>120 Rs</td>
+                        </tr><tr>
+                            <td>1</td>
+                            <td>University of Karachi</td>
+                            <td>Malir Halt</td>
+                            <td>4.00 pm</td>
+                            <td>4.50 pm</td>
+                            <td>Shahid Khan</td>
+                            <td>03422556789</td>
+                            <td>120 Rs</td>
+                        </tr><tr>
+                            <td>1</td>
+                            <td>University of Karachi</td>
+                            <td>Malir Halt</td>
+                            <td>4.00 pm</td>
+                            <td>4.50 pm</td>
+                            <td>Shahid Khan</td>
+                            <td>03422556789</td>
+                            <td>120 Rs</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>University of Karachi</td>
+                            <td>Malir Halt</td>
+                            <td>4.00 pm</td>
+                            <td>4.50 pm</td>
+                            <td>Shahid Khan</td>
+                            <td>03422556789</td>
+                            <td>120 Rs</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>University of Karachi</td>
+                            <td>Malir Halt</td>
+                            <td>4.00 pm</td>
+                            <td>4.50 pm</td>
+                            <td>Shahid Khan</td>
+                            <td>03422556789</td>
+                            <td>120 Rs</td>
+                        </tr><tr>
+                            <td>1</td>
+                            <td>University of Karachi</td>
+                            <td>Malir Halt</td>
+                            <td>4.00 pm</td>
+                            <td>4.50 pm</td>
+                            <td>Shahid Khan</td>
+                            <td>03422556789</td>
+                            <td>120 Rs</td>
+                        </tr><tr>
+                            <td>1</td>
+                            <td>University of Karachi</td>
+                            <td>Malir Halt</td>
+                            <td>4.00 pm</td>
+                            <td>4.50 pm</td>
+                            <td>Shahid Khan</td>
+                            <td>03422556789</td>
+                            <td>120 Rs</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </body>
+</html>

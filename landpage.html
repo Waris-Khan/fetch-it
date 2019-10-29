@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fetch it | Dashboard</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Unica One' rel='stylesheet'>
+        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Vollkorn'>
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+        
+        <link rel="shortcut icon" type="image/png" href="Assets/fetch-it-logo-2.png">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+        
+    </head>
+    <body>
+        
+        <!-- SidePanel -->
+        <div class="nav navbar navbar-inverse">
+            <div class="container">
+                <div class="dropdown">
+                    <div class="navbar-header">
+                        <div class="navbar-brand">
+                            <button href="#" class="btn btn-link btn-lg dropdown-toggle " type="button" id="menu1" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-menu-hamburger" style="color:white"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li class="side-menu" role="presentation"><a role="menuitem" tabindex="-1" href="index.html" class="side-menu-text">Home</a></li>
+                              <li class="side-menu" role="presentation"><a class="side-menu-text" role="menuitem" tabindex="-1" href="myOrders.html">My Order</a></li>
+                              <li class="side-menu" role="presentation"><a class="side-menu-text" role="menuitem" tabindex="-1" href="#">Notification</a></li>
+                              <li class="side-menu" role="presentation"><a class="side-menu-text" role="menuitem" tabindex="-1" href="#">Logout</a></li>
+                              <li role="presentation" class="divider"></li>
+                              <li class="side-menu" role="presentation"><a class="side-menu-text" role="menuitem" tabindex="-1" href="#">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        
+        
+        <section class="middleSection"> 
+            
+        <div class=" centered">
+            <div class="container">
+                <h1 class="hero-heading landPage-heading">Fetch it</h1>
+                <div class="hero-subheading">We fetch in minutes with the tap of a button</div>
+                <br>
+                <div class="hero-div-block">
+                    <a class="placeOrderButton" href="#" data-toggle="modal" data-target="#myModal"><b>Place Order</b></a>
+                    
+                    <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Place Your Order</h4>
+                          </div>
+                          <div class="modal-body">
+                              <form class="form-horizontal">
+                                  <div class="form-group-sm">
+                                      <label class="control-label col-sm-2">Pick-up</label>
+                                      <input class="form-control input-sm" type="text" name="source" id="source" placeholder="Enter Pick-up Location">
+                                  </div>
+                                  <div class="form-group-sm">
+                                      <label class="control-label col-sm-2">Drop-off</label>
+                                      <input class="form-control input-sm" type="text" name="destination" id="destination" placeholder="Enter Drop-off Location">
+                                  </div>
+                              </form>
+
+                              <div class="map-box" id="map">
+                                  <!--
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d924234.6302790705!2d66.5949500668829!3d25.193389468758728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C+Pakistan!5e0!3m2!1sen!2s!4v1518447414386" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+
+                              </div>
+
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                </div>
+                
+                    <div class="well orderInstructionContainer">
+                        <div class="orderInstructionHeading">
+                            <b><h4 class="text-center">Order Information</h4></b>
+                        </div>
+                        <div class="orderInstructionBody">
+                            <div class="bicycle-img-cont">
+                            <img src="Assets/bicycle%20icon%20white.png" class="bicycleIcon">
+                            </div>
+                            <p class="text-center order-instruction">
+                                - Max Weight: 3 Kg
+                                <br>
+                                - Dimension: L30 * W25 * H10 cm
+                            </p>
+                        </div>
+                    </div>
+                
+                
+            </div>
+        </div>
+
+        </section>
+        
+        
+        <script>
+        var map;
+        function initMap() {
+                
+                var location = {lat: 24.945422 ,lng: 67.115029};
+                var map = new google.maps.Map(document.getElementById("map"), {
+                    center: location, 
+                    zoom: 4
+                });
+                
+                var marker = new google.maps.Marker({
+                   position: location,
+                    map:map
+                });
+            }
+        </script>
+        
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeJ1d8zJ8N0LX9ENFhstLQ8-4eYLBaVfo
+
+&callback=initMap" ></script>
+    </body>
+</html>
